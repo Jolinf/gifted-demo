@@ -3,114 +3,116 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Gifted · Shortlet apartments in Lekki Phase 1</title>
-<meta name="description" content="Every stay, a gift. Serviced shortlet apartments in Lekki Phase 1, Lagos.">
-<meta name="theme-color" content="#0B1220">
-<meta property="og:title" content="Gifted · Every stay, a gift.">
-<meta property="og:description" content="Serviced shortlet apartments in Lekki Phase 1, Lagos.">
+<title>Gifted Homes and Apartments · Shortlets in Lekki</title>
+<meta name="description" content="Every stay, a gift. Luxury shortlet apartments in Lekki Phase 1, Lagos, with 24/7 power and a concierge on call.">
+<meta name="theme-color" content="#141C28">
+<meta property="og:title" content="Gifted Homes and Apartments · Every stay, a gift.">
+<meta property="og:description" content="Luxury shortlet apartments in Lekki Phase 1, Lagos.">
 <meta property="og:image" content="img/og.jpg">
+<link rel="icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/hero-portrait.jpg" media="(orientation: portrait)">
 <style>
 :root{
-  --navy-950:#0B1220; --navy-900:#111A2E; --navy-800:#1B2A47; --navy-700:#2A3B5E;
-  --ink:#F5F2EC; --ink-2:rgba(245,242,236,.78); --ink-3:rgba(245,242,236,.6);
-  --line:rgba(245,242,236,.18);
-  --red:#D7263D; --red-press:#B81E33;
-  --sans:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --serif:"Cormorant Garamond",Georgia,serif;
+  --navy-950:#141C28; --navy-900:#1E2A3B; --navy-800:#29384F; --navy-700:#36476370;
+  --ink:#F6F2EC; --ink-2:rgba(246,242,236,.8); --ink-3:rgba(246,242,236,.62);
+  --line:rgba(246,242,236,.16);
+  --copper:#9A5A31; --copper-press:#80481F; --gold:#C9A46A;
+  --display:"Marcellus",Georgia,serif;
+  --sans:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
   --r:14px; --gut:20px;
   --ease:cubic-bezier(.2,.7,.2,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{background:var(--navy-950);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--navy-950);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body.locked{overflow:hidden}
 img,video{display:block;max-width:100%}
 a{color:inherit}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:6px}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
 
-/* ---------- buttons ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;letter-spacing:.02em;text-decoration:none;transition:background .2s,transform .15s,border-color .2s;-webkit-tap-highlight-color:transparent;white-space:nowrap}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;font-weight:500;font-size:15px;letter-spacing:.02em;text-decoration:none;transition:background .2s,transform .15s,border-color .2s,opacity .2s;-webkit-tap-highlight-color:transparent;white-space:nowrap}
 .btn:active{transform:scale(.98)}
-.btn-red{background:var(--red);color:#fff}
-.btn-red:hover{background:var(--red-press)}
-.btn-line{border:1.5px solid rgba(245,242,236,.7);color:var(--ink);background:rgba(11,18,32,.25);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
-.btn-line:hover{border-color:var(--ink);background:rgba(11,18,32,.45)}
+.btn-main{background:var(--copper);color:#fff}
+.btn-main:hover{background:var(--copper-press)}
+.btn-line{border:1.5px solid rgba(246,242,236,.65);color:var(--ink);background:rgba(20,28,40,.3);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.btn-line:hover{border-color:var(--ink);background:rgba(20,28,40,.5)}
+.btn[aria-disabled="true"]{opacity:.5;cursor:not-allowed;border-style:dashed}
+.btn[aria-disabled="true"]:active{transform:none}
 .btn svg{width:20px;height:20px;flex:none}
-.btn small{font-weight:500;opacity:.75;font-size:12px}
 
-/* ---------- wordmark ---------- */
-.mark{font-weight:600;letter-spacing:.32em;text-transform:uppercase;display:inline-block;position:relative;padding-right:0}
-.mark .rib{display:block;height:3px;background:var(--red);margin-top:.28em;transform-origin:left;border-radius:2px}
-
-/* ---------- splash ---------- */
+/* splash */
 #splash{position:fixed;inset:0;z-index:100;background:var(--navy-950);display:grid;place-items:center;transition:opacity .6s var(--ease),visibility .6s}
 #splash.gone{opacity:0;visibility:hidden}
-#splash .mark{font-size:clamp(34px,11vw,64px);margin-right:-.32em}
-#splash .l{display:inline-block;opacity:0;transform:translateY(14px);animation:up .7s var(--ease) forwards}
-#splash .rib{transform:scaleX(0);animation:rib .7s .75s var(--ease) forwards;margin-right:.32em}
-#splash p{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink-2);text-align:center;margin-top:18px;opacity:0;animation:fade .6s 1.15s forwards}
+#splash .in{text-align:center}
+#splash img{width:min(56vw,240px);height:auto;margin:0 auto;opacity:0;transform:translateY(12px);animation:up .9s .1s var(--ease) forwards}
+#splash .rib{width:min(40vw,170px);height:2px;background:var(--gold);margin:22px auto 0;transform:scaleX(0);animation:rib .7s .8s var(--ease) forwards}
+#splash p{font-family:var(--display);font-size:21px;color:var(--ink-2);margin-top:16px;opacity:0;animation:fade .6s 1.2s forwards}
 @keyframes up{to{opacity:1;transform:none}}
 @keyframes rib{to{transform:scaleX(1)}}
 @keyframes fade{to{opacity:1}}
 
-/* ---------- hero ---------- */
+/* hero */
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
 .hero picture,.hero picture img,.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
 .hero video{opacity:0;transition:opacity 1.2s}
 .hero video.on{opacity:1}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,18,32,.55) 0%,rgba(11,18,32,.25) 30%,rgba(11,18,32,.7) 62%,rgba(11,18,32,.96) 100%)}
-.hero-in{width:100%;max-width:1100px;margin:0 auto;padding:0 var(--gut) calc(48px + env(safe-area-inset-bottom))}
-.eyebrow{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2)}
-.hero h1{margin-top:14px;font-size:clamp(46px,15vw,104px);line-height:1}
-.hero h1 .mark{margin-right:-.32em}
-.tag{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(30px,8.6vw,52px);line-height:1.1;margin-top:22px}
-.desc{color:var(--ink-2);font-size:16px;margin-top:10px;max-width:30ch}
-.cta{display:flex;flex-direction:column;gap:12px;margin-top:30px}
-.top{position:absolute;top:0;left:0;right:0;padding:calc(16px + env(safe-area-inset-top)) var(--gut) 0;display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto}
-.top .mark{font-size:15px}
-.top .mark .rib{height:2px}
-.top a{font-size:13px;font-weight:600;letter-spacing:.06em;text-decoration:none;min-height:44px;display:flex;align-items:center;gap:8px}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,28,40,.6) 0%,rgba(20,28,40,.25) 28%,rgba(20,28,40,.72) 60%,rgba(20,28,40,.97) 100%)}
+.top{position:absolute;top:0;left:0;right:0;padding:calc(12px + env(safe-area-inset-top)) var(--gut) 0;display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto}
+.top img{width:84px;height:auto}
+.top a{font-size:14px;font-weight:500;letter-spacing:.04em;text-decoration:none;min-height:44px;display:flex;align-items:center;gap:8px}
 .top a svg{width:18px;height:18px}
+.hero-in{width:100%;max-width:1100px;margin:0 auto;padding:0 var(--gut) calc(44px + env(safe-area-inset-bottom))}
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:var(--display);font-weight:400;margin-top:14px;line-height:.95}
+.hero h1 .n{display:block;font-size:clamp(64px,21vw,128px);letter-spacing:.01em}
+.hero h1 .s{display:block;font-family:var(--sans);font-size:clamp(12px,3.4vw,16px);font-weight:500;letter-spacing:.42em;text-transform:uppercase;color:var(--ink-2);margin-top:10px}
+.rib{display:block;width:72px;height:2px;background:var(--gold);margin-top:22px}
+.tag{font-family:var(--display);font-size:clamp(30px,8.4vw,50px);line-height:1.1;margin-top:18px}
+.desc{color:var(--ink-2);font-size:16px;margin-top:10px;max-width:34ch;font-weight:300}
+.cta{display:flex;flex-direction:column;gap:12px;margin-top:28px}
 
-/* ---------- listings ---------- */
+/* listings */
 .list{padding:72px var(--gut) 80px;max-width:1100px;margin:0 auto}
 .sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:24px}
-.sec-h h2{font-family:var(--serif);font-style:italic;font-weight:500;font-size:36px;line-height:1.1}
+.sec-h h2{font-family:var(--display);font-weight:400;font-size:36px;line-height:1.1}
 .sec-h span{font-size:13px;color:var(--ink-3);letter-spacing:.06em}
 .grid{display:grid;gap:24px}
 .card{position:relative;border-radius:var(--r);overflow:hidden;background:var(--navy-900);isolation:isolate}
 .card .ph{aspect-ratio:4/5;position:relative}
-.card .ph img{width:100%;height:100%;object-fit:cover;object-position:42% 50%}
-.card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,32,0) 40%,rgba(11,18,32,.92) 100%)}
-.badge{position:absolute;top:14px;left:14px;z-index:2;font-size:12px;font-weight:600;letter-spacing:.06em;padding:7px 12px;border-radius:999px;background:rgba(11,18,32,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;gap:6px;align-items:center}
+.card .ph img{width:100%;height:100%;object-fit:cover}
+.card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,28,40,0) 38%,rgba(20,28,40,.94) 100%)}
+.badge{position:absolute;top:14px;left:14px;z-index:2;font-size:12px;font-weight:500;letter-spacing:.06em;padding:7px 12px;border-radius:999px;background:rgba(20,28,40,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;gap:6px;align-items:center}
 .badge svg{width:15px;height:15px}
 .card .body{position:absolute;left:0;right:0;bottom:0;padding:20px;z-index:2}
-.card h3{font-size:24px;font-weight:600;letter-spacing:.02em}
-.meta{color:var(--ink-2);font-size:14px;margin-top:4px}
+.card h3{font-family:var(--display);font-weight:400;font-size:28px;line-height:1.1}
+.meta{color:var(--ink-2);font-size:14px;margin-top:6px}
 .price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-top:12px}
-.price b{font-size:22px;font-weight:700}
+.price b{font-size:22px;font-weight:600}
 .price i{font-style:normal;color:var(--ink-2);font-size:14px}
-.sample{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:6px;border:1px solid var(--line);color:var(--ink-3)}
 .card .btn{margin-top:16px;width:100%}
 
-/* ---------- footer ---------- */
+/* footer */
 footer{border-top:1px solid var(--line);background:var(--navy-900)}
-.foot{max-width:1100px;margin:0 auto;padding:44px var(--gut) calc(36px + env(safe-area-inset-bottom));display:grid;gap:22px}
-.foot .mark{font-size:20px}
-.foot .tagline{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--ink-2);margin-top:6px}
-.foot ul{list-style:none;display:grid;gap:4px}
+.foot{max-width:1100px;margin:0 auto;padding:44px var(--gut) calc(36px + env(safe-area-inset-bottom));display:grid;gap:26px}
+.foot .brand img{width:120px;height:auto}
+.foot .tagline{font-family:var(--display);font-size:22px;color:var(--ink-2);margin-top:12px}
+.foot h3{font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.foot ul{list-style:none;display:grid;gap:2px}
 .foot li a,.foot li span{display:flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:var(--ink-2)}
 .foot li a:hover{color:var(--ink)}
 .foot li svg{width:18px;height:18px;flex:none}
+.foot .hours{color:var(--ink-3);font-size:14px;line-height:1.7}
+.owners{border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.owners p{color:var(--ink-2);font-size:15px;margin:6px 0 14px}
+.owners b{font-family:var(--display);font-weight:400;font-size:22px}
 .fine{font-size:12px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:18px;line-height:1.6}
 
-/* ---------- stay layer (feed) ---------- */
+/* stay feed */
 .layer{position:fixed;inset:0;z-index:50;background:#000;display:none}
 .layer.open{display:block}
 #stay{overflow-y:auto;scroll-snap-type:y mandatory;overscroll-behavior:contain}
@@ -119,37 +121,39 @@ footer{border-top:1px solid var(--line);background:var(--navy-900)}
 .photos::-webkit-scrollbar{display:none}
 .photos figure{flex:0 0 100%;height:100%;scroll-snap-align:center;position:relative;background:var(--navy-900)}
 .photos img{width:100%;height:100%;object-fit:cover}
-.shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 16%,rgba(0,0,0,0) 36%,rgba(8,12,22,.82) 62%,rgba(8,12,22,.97) 100%)}
+.shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 16%,rgba(0,0,0,0) 34%,rgba(14,20,30,.84) 60%,rgba(14,20,30,.97) 100%)}
 .bar{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:calc(10px + env(safe-area-inset-top)) 12px 0;z-index:3}
-.icon-btn{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:rgba(11,18,32,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.icon-btn{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:rgba(20,28,40,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);flex:none}
 .icon-btn svg{width:22px;height:22px}
-.count{font-size:13px;font-weight:600;letter-spacing:.06em;padding:8px 12px;border-radius:999px;background:rgba(11,18,32,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.room-cap{position:absolute;left:var(--gut);top:calc(72px + env(safe-area-inset-top));z-index:3;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);text-shadow:0 1px 8px rgba(0,0,0,.6)}
-.dots{display:flex;gap:6px;margin-bottom:14px}
-.dots i{width:6px;height:6px;border-radius:3px;background:rgba(245,242,236,.4);transition:width .25s,background .25s}
-.dots i.on{width:18px;background:var(--ink)}
-.arrow{position:absolute;top:40%;z-index:3;display:none}
+.count{font-size:13px;font-weight:500;letter-spacing:.06em;padding:8px 12px;border-radius:999px;background:rgba(20,28,40,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.room-cap{position:absolute;left:var(--gut);top:calc(72px + env(safe-area-inset-top));z-index:3;font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.dots{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.dots i{width:6px;height:6px;border-radius:3px;background:rgba(246,242,236,.4);transition:width .25s,background .25s}
+.dots i.on{width:18px;background:var(--gold)}
+.arrow{position:absolute;top:38%;z-index:3;display:none}
 .arrow.prev{left:12px}.arrow.next{right:12px}
 @media (hover:hover) and (pointer:fine){.arrow{display:grid}}
-.info{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:0 var(--gut) calc(20px + env(safe-area-inset-bottom));max-width:640px}
-.info h2{font-size:30px;font-weight:600;letter-spacing:.02em;line-height:1.15}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.chips span{font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);color:var(--ink-2)}
-.acts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.info{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:0 var(--gut) calc(18px + env(safe-area-inset-bottom));max-width:640px}
+.info h2{font-family:var(--display);font-weight:400;font-size:34px;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chips span{font-size:13px;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--ink-2)}
+.chips span.hl{border-color:var(--gold);color:var(--gold)}
+.acts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
 .acts .wide{grid-column:1/-1}
-.acts .btn{padding:0 14px;font-size:14px}
-.swipe{display:flex;justify-content:center;align-items:center;gap:6px;font-size:12px;color:var(--ink-3);margin-top:12px;letter-spacing:.06em}
+.acts .btn{padding:0 12px;font-size:14px}
+.swipe{display:flex;justify-content:center;align-items:center;gap:6px;font-size:12px;color:var(--ink-3);margin-top:10px;letter-spacing:.06em}
 .swipe svg{width:14px;height:14px;animation:bob 1.8s infinite}
 @keyframes bob{50%{transform:translateY(-4px)}}
 .end{display:grid;place-items:center;text-align:center;background:radial-gradient(120% 80% at 50% 0%,var(--navy-800),var(--navy-950))}
 .end .in{padding:0 28px;max-width:420px}
-.end .mark{font-size:18px}
-.end h2{font-family:var(--serif);font-style:italic;font-weight:500;font-size:36px;line-height:1.15;margin-top:26px}
+.end img{width:110px;height:auto;margin:0 auto}
+.end h2{font-family:var(--display);font-weight:400;font-size:34px;line-height:1.15;margin-top:26px}
 .end p{color:var(--ink-2);margin-top:12px}
-.end .btn{margin-top:26px;width:100%}
-.end .back{margin-top:10px}
+.end .btn{margin-top:22px;width:100%}
+.end .btn + .btn{margin-top:10px}
+.end .own{display:block;margin-top:22px;font-size:14px;color:var(--ink-3);min-height:44px;line-height:44px}
 
-/* ---------- sheet ---------- */
+/* sheet */
 #sheet{position:fixed;inset:0;z-index:70;display:none}
 #sheet.open{display:block}
 #sheet .scrim{position:absolute;inset:0;background:rgba(0,0,0,.55);opacity:0;transition:opacity .3s}
@@ -158,60 +162,64 @@ footer{border-top:1px solid var(--line);background:var(--navy-900)}
 #sheet.show .panel{transform:none}
 .grab{width:40px;height:4px;border-radius:2px;background:var(--line);margin:6px auto 4px}
 .sheet-h{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;position:sticky;top:-8px;background:var(--navy-900);padding:10px 0 12px;z-index:1}
-.sheet-h h2{font-size:24px;font-weight:600}
+.sheet-h h2{font-family:var(--display);font-weight:400;font-size:28px;line-height:1.15}
 .panel section{border-top:1px solid var(--line);padding:18px 0}
-.panel h3{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+.panel h3{font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
 .panel p{color:var(--ink-2)}
-.rows{display:grid;gap:8px}
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.specs div{border:1px solid var(--line);border-radius:12px;padding:12px 6px}
+.specs b{display:block;font-size:20px;font-weight:600}
+.specs span{font-size:12px;color:var(--ink-3);letter-spacing:.06em}
+.rows{display:grid;gap:10px}
 .rows div{display:flex;justify-content:space-between;gap:16px}
 .rows dt{color:var(--ink-2)}
-.rows dd{font-weight:600;text-align:right}
+.rows dd{font-weight:500;text-align:right}
 .feat{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
 .feat li{display:flex;gap:8px;align-items:flex-start;color:var(--ink-2);font-size:14px}
-.feat li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);margin-top:8px;flex:none}
-.plain{list-style:none;display:grid;gap:8px;color:var(--ink-2)}
-.maplink{display:flex;align-items:center;gap:10px;min-height:48px;font-weight:600;text-decoration:none;color:var(--ink)}
-.maplink svg{width:20px;height:20px}
+.feat li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:8px;flex:none}
+.faq{display:grid;gap:12px;color:var(--ink-2);font-size:15px}
+.faq b{color:var(--ink);font-weight:500;display:block}
+.maplink{display:flex;align-items:center;gap:10px;min-height:48px;font-weight:500;text-decoration:none;color:var(--ink)}
+.maplink svg{width:20px;height:20px;flex:none}
 .note{font-size:12px;color:var(--ink-3);margin-top:8px}
 
-/* ---------- tour ---------- */
+/* tour */
 #tour{background:#000}
 #pano{position:absolute;inset:0}
 .tour-bar{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top)) 12px 12px;background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,0))}
 .tour-title{flex:1;min-width:0}
-.tour-title b{display:block;font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tour-title b{display:block;font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tour-title span{font-size:12px;color:var(--ink-3)}
-.rooms-btn{min-height:48px;padding:0 16px;border-radius:999px;background:rgba(11,18,32,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-size:14px;font-weight:600;display:flex;gap:8px;align-items:center}
+.rooms-btn{min-height:48px;padding:0 16px;border-radius:999px;background:rgba(20,28,40,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-size:14px;font-weight:500;display:flex;gap:8px;align-items:center}
 .rooms-btn svg{width:18px;height:18px}
 .tour-foot{position:absolute;left:0;right:0;bottom:0;z-index:5;padding:28px 16px calc(16px + env(safe-area-inset-bottom));background:linear-gradient(0deg,rgba(0,0,0,.7),rgba(0,0,0,0));display:grid;gap:10px;justify-items:center}
 .tour-foot .btn{width:100%;max-width:420px}
 .tour-note{font-size:11px;color:var(--ink-3);text-align:center;letter-spacing:.02em}
-.hint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;background:rgba(11,18,32,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:14px 18px;border-radius:14px;font-size:14px;text-align:center;pointer-events:none;transition:opacity .4s;max-width:80vw}
+.hint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;background:rgba(20,28,40,.75);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:14px 18px;border-radius:14px;font-size:14px;text-align:center;pointer-events:none;transition:opacity .4s;max-width:80vw}
 .hint.off{opacity:0}
 .loading{position:absolute;inset:0;z-index:3;display:grid;place-items:center;color:var(--ink-2);font-size:14px}
-.spin{width:34px;height:34px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--ink);animation:sp 1s linear infinite;margin:0 auto 12px}
+.spin{width:34px;height:34px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--gold);animation:sp 1s linear infinite;margin:0 auto 12px}
 @keyframes sp{to{transform:rotate(1turn)}}
 .room-list{position:absolute;top:0;right:0;bottom:0;width:min(320px,86vw);z-index:6;background:var(--navy-900);transform:translateX(100%);transition:transform .3s var(--ease);padding:calc(14px + env(safe-area-inset-top)) 12px 20px;overflow-y:auto;visibility:hidden}
 .room-list.open{transform:none;visibility:visible}
-.room-list h3{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);padding:12px 8px}
-.room-list button{display:flex;width:100%;min-height:52px;align-items:center;padding:0 12px;border-radius:10px;font-weight:500;text-align:left}
-.room-list button[aria-current="true"]{background:var(--navy-800);font-weight:600}
-.room-list button[aria-current="true"]::after{content:"";margin-left:auto;width:8px;height:8px;border-radius:50%;background:var(--red)}
+.room-list h3{font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);padding:12px 8px}
+.room-list button{display:flex;width:100%;min-height:52px;align-items:center;padding:0 12px;border-radius:10px;text-align:left}
+.room-list button[aria-current="true"]{background:var(--navy-800);font-weight:500}
+.room-list button[aria-current="true"]::after{content:"";margin-left:auto;width:8px;height:8px;border-radius:50%;background:var(--gold)}
 .pnlm-container{background:#000 !important;font-family:var(--sans) !important}
 .pnlm-load-box,.pnlm-about-msg,.pnlm-controls-container{display:none !important}
-.hs{min-height:44px;padding:0 16px 0 10px;border-radius:999px;background:rgba(11,18,32,.78);color:#fff;font:600 13px var(--sans);display:flex;align-items:center;gap:6px;white-space:nowrap;transform:translate(-50%,-50%);border:1.5px solid rgba(255,255,255,.75);box-shadow:0 4px 18px rgba(0,0,0,.35);cursor:pointer}
+.hs{min-height:44px;padding:0 16px 0 10px;border-radius:999px;background:rgba(20,28,40,.8);color:#fff;font:500 13px var(--sans);display:flex;align-items:center;gap:6px;white-space:nowrap;transform:translate(-50%,-50%);border:1.5px solid rgba(255,255,255,.75);box-shadow:0 4px 18px rgba(0,0,0,.35);cursor:pointer}
 .hs svg{width:18px;height:18px}
-.hs:hover{background:var(--red);border-color:var(--red)}
+.hs:hover{background:var(--copper);border-color:var(--copper)}
 .fallback{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:24px;z-index:4}
 .fallback.on{display:grid}
 
 @media (min-width:760px){
   .cta{flex-direction:row}
   .cta .btn{min-width:220px}
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .card .ph{aspect-ratio:4/3}
-  .foot{grid-template-columns:1.4fr 1fr;align-items:start}
-  .fine{grid-column:1/-1}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .foot{grid-template-columns:1.2fr 1fr 1fr;align-items:start}
+  .owners,.fine{grid-column:1/-1}
   .info{left:max(var(--gut),calc(50% - 560px))}
 }
 @media (prefers-reduced-motion:reduce){
@@ -221,16 +229,15 @@ footer{border-top:1px solid var(--line);background:var(--navy-900)}
 </head>
 <body>
 
-<!-- splash -->
 <div id="splash" aria-hidden="true">
-  <div>
-    <div class="mark"><span class="l" style="animation-delay:.05s">G</span><span class="l" style="animation-delay:.12s">I</span><span class="l" style="animation-delay:.19s">F</span><span class="l" style="animation-delay:.26s">T</span><span class="l" style="animation-delay:.33s">E</span><span class="l" style="animation-delay:.4s">D</span><span class="rib"></span></div>
+  <div class="in">
+    <img src="img/logo-light.png" alt="" width="240" height="160">
+    <div class="rib"></div>
     <p>Every stay, a gift.</p>
   </div>
 </div>
 
 <main id="main">
-  <!-- hero -->
   <header class="hero" id="top">
     <picture>
       <source media="(orientation: portrait)" srcset="img/hero-portrait.jpg">
@@ -238,200 +245,118 @@ footer{border-top:1px solid var(--line);background:var(--navy-900)}
     </picture>
     <video id="heroVid" muted playsinline loop preload="none" poster="img/hero-first.jpg" aria-hidden="true"></video>
     <div class="top">
-      <span class="mark" aria-hidden="true">Gifted<span class="rib"></span></span>
-      <a data-wa="general" href="#" aria-label="Message Gifted on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>Chat</a>
+      <img src="img/logo-light.png" alt="Gifted Homes and Apartments" width="84" height="56">
+      <a data-wa="general" href="#" aria-label="Chat with Gifted on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>Chat</a>
     </div>
     <div class="hero-in">
-      <p class="eyebrow">Shortlets · Lekki Phase 1</p>
-      <h1><span class="mark">Gifted<span class="rib"></span></span></h1>
+      <p class="eyebrow">Shortlet apartments · Lekki</p>
+      <h1><span class="n">Gifted</span><span class="s">Homes &amp; Apartments</span></h1>
+      <span class="rib" aria-hidden="true"></span>
       <p class="tag">Every stay, a gift.</p>
-      <p class="desc">Serviced shortlet apartments in Lekki Phase 1.</p>
+      <p class="desc">Luxury short and long stays in Lekki Phase 1, with 24/7 power and a concierge who picks up the phone.</p>
       <div class="cta">
-        <a class="btn btn-red" data-wa="general" href="#">
+        <a class="btn btn-main" data-wa="general" href="#">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>
           Reach out
         </a>
-        <button class="btn btn-line" data-open-stay="0">Explore shortlets</button>
+        <button class="btn btn-line" data-open-stay="ezrahaus">Explore shortlets</button>
       </div>
     </div>
   </header>
 
-  <!-- listings -->
   <section class="list" id="shortlets" aria-labelledby="sl-h">
-    <div class="sec-h"><h2 id="sl-h">Our shortlets</h2><span>1 apartment</span></div>
-    <div class="grid">
-      <article class="card">
-        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><path d="M12 2v20"/></svg>360° tour</span>
-        <div class="ph"><img src="img/0701-800.jpg" srcset="img/0701-800.jpg 800w, img/0701-1600.jpg 1600w" sizes="(min-width:760px) 50vw, 100vw" alt="Ezra Courts living room with open staircase and lit ceiling" loading="lazy"></div>
-        <div class="body">
-          <h3>Ezra Courts</h3>
-          <p class="meta">Lekki Phase 1 · 2 bedrooms · Maisonette</p>
-          <div class="price"><b>₦180,000</b><i>/ night</i><span class="sample">Sample rate</span></div>
-          <button class="btn btn-line" data-open-stay="0">More info</button>
-        </div>
-      </article>
-    </div>
+    <div class="sec-h"><h2 id="sl-h">Our shortlets</h2><span>3 apartments</span></div>
+    <div class="grid" id="cards"></div>
   </section>
 </main>
 
 <footer>
   <div class="foot">
-    <div>
-      <span class="mark" aria-label="Gifted">Gifted<span class="rib"></span></span>
+    <div class="brand">
+      <img src="img/logo-light.png" alt="Gifted Homes and Apartments" width="120" height="80">
       <p class="tagline">Every stay, a gift.</p>
     </div>
-    <ul>
-      <li><a data-wa="general" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>Chat on WhatsApp</a></li>
-      <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Lekki Phase 1, Lagos</span></li>
-    </ul>
-    <p class="fine">© 2026 Gifted. Demo preview: rates and rules are samples until confirmed. Photos and tour from December 2024.</p>
+    <div>
+      <h3>Talk to us</h3>
+      <ul>
+        <li><a data-wa="general" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>Chat on WhatsApp</a></li>
+        <li><a href="tel:+2349045165367"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>+234 904 516 5367</a></li>
+        <li><a href="mailto:Horizon2haus@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Horizon2haus@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/giftedapartments" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@giftedapartments</a></li>
+        <li><a href="https://www.tiktok.com/@gifted_apartments" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 2.8 2.3 4.5 5 4.8"/></svg>@gifted_apartments</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Office</h3>
+      <ul>
+        <li><a href="https://maps.app.goo.gl/i5jUyDDH2vwQyN3q6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Shonibare Estate, Maryland, Lagos</a></li>
+      </ul>
+      <p class="hours">Mon to Fri, 9am to 6pm<br>Saturday, 10am to 4pm<br>Sunday closed</p>
+    </div>
+    <div class="owners">
+      <b>Own a home in Lekki?</b>
+      <p>We manage shortlets for homeowners, keeping your property livable, luxurious and profitable.</p>
+      <a class="btn btn-line" data-wa="owner" href="#">Talk to us about management</a>
+    </div>
+    <p class="fine">© 2026 Gifted Homes and Apartments. The Ezrahaus 360° tour is a preview built from existing photos and video.</p>
   </div>
 </footer>
 
-<!-- stay feed -->
-<div class="layer" id="stay" role="dialog" aria-modal="true" aria-label="Ezra Courts details">
-  <article class="slide" id="s-ezra" data-slug="ezra-courts">
-    <div class="photos" tabindex="0" aria-label="Photos of Ezra Courts. Swipe sideways for more."></div>
-    <div class="shade"></div>
-    <div class="bar">
-      <button class="icon-btn" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-      <span class="count" aria-live="polite">1 / 10</span>
-    </div>
-    <p class="room-cap"></p>
-    <button class="icon-btn arrow prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
-    <button class="icon-btn arrow next" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
-    <div class="info">
-      <div class="dots" aria-hidden="true"></div>
-      <h2>Ezra Courts</h2>
-      <p class="meta">Lekki Phase 1 · 2 bedrooms · Maisonette</p>
-      <div class="price"><b>₦180,000</b><i>/ night</i><span class="sample">Sample rate</span></div>
-      <div class="chips"><span>Swimming pool</span><span>24-hour power</span><span>PS5</span><span>Smart lock</span></div>
-      <div class="acts">
-        <a class="btn btn-red wide" data-wa="stay" href="#">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>
-          Check availability
-        </a>
-        <button class="btn btn-line" data-tour="ezra-courts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><path d="M12 2v20"/></svg>Take the tour</button>
-        <button class="btn btn-line" data-sheet>Full details</button>
-      </div>
-      <p class="swipe" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 15 6-6 6 6"/></svg>Swipe up for more</p>
-    </div>
-  </article>
+<div class="layer" id="stay" role="dialog" aria-modal="true" aria-label="Our shortlets"></div>
 
-  <article class="slide end" id="s-end">
-    <div class="bar"><button class="icon-btn" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button><span></span></div>
-    <div class="in">
-      <span class="mark">Gifted<span class="rib"></span></span>
-      <h2>More apartments are on the way.</h2>
-      <p>Ask us what's free for your dates and we'll send you the options.</p>
-      <a class="btn btn-red" data-wa="general" href="#">Ask what's available</a>
-      <button class="btn btn-line back" data-back-top>Back to Ezra Courts</button>
-    </div>
-  </article>
-</div>
-
-<!-- details sheet -->
 <div id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-h">
   <div class="scrim" data-sheet-close></div>
-  <div class="panel">
-    <div class="grab"></div>
-    <div class="sheet-h">
-      <div><h2 id="sheet-h">Ezra Courts</h2><p class="meta">2-bedroom maisonette · Lekki Phase 1</p></div>
-      <button class="icon-btn" data-sheet-close aria-label="Close details"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-    </div>
-    <section>
-      <h3>Rates <span class="sample" style="margin-left:6px">Sample</span></h3>
-      <dl class="rows">
-        <div><dt>Per night</dt><dd>₦180,000</dd></div>
-        <div><dt>Caution deposit (refundable)</dt><dd>₦100,000</dd></div>
-        <div><dt>Minimum stay</dt><dd>1 night</dd></div>
-      </dl>
-    </section>
-    <section>
-      <h3>The apartment</h3>
-      <p>A two-floor maisonette with warm, layered lighting throughout. The living room opens onto a fitted kitchen with an island and bar stools, and a glass staircase leads up to the second bedroom.</p>
-      <ul class="plain" style="margin-top:12px">
-        <li>Living room with lounge and smart TV</li>
-        <li>Fitted kitchen with island, oven and microwave</li>
-        <li>Bedroom 1 with TV and work desk</li>
-        <li>Bedroom 2 upstairs with TV and work desk</li>
-        <li>Rain shower and walk-in shower bathrooms</li>
-      </ul>
-    </section>
-    <section>
-      <h3>Features</h3>
-      <ul class="feat">
-        <li>Swimming pool</li><li>24-hour power</li><li>PS5</li><li>Smart home</li>
-        <li>Smart lock self check-in</li><li>Wi-Fi</li><li>Netflix and DStv</li><li>Air conditioning</li>
-        <li>En-suite rooms</li><li>Fully equipped kitchen</li><li>Washing machine</li><li>Housekeeping</li>
-        <li>Borehole water</li><li>Backup generator</li><li>24-hour security</li><li>Parking</li>
-      </ul>
-    </section>
-    <section>
-      <h3>Check-in <span class="sample" style="margin-left:6px">Sample</span></h3>
-      <dl class="rows">
-        <div><dt>Check-in</dt><dd>From 2:00 pm</dd></div>
-        <div><dt>Check-out</dt><dd>By 12:00 pm</dd></div>
-        <div><dt>Access</dt><dd>Smart lock code</dd></div>
-      </dl>
-      <p class="note">A valid ID is needed before your code is sent.</p>
-    </section>
-    <section>
-      <h3>House rules <span class="sample" style="margin-left:6px">Sample</span></h3>
-      <ul class="plain">
-        <li>No parties or events</li>
-        <li>No smoking indoors</li>
-        <li>Visitors registered at the gate</li>
-      </ul>
-    </section>
-    <section>
-      <h3>Location</h3>
-      <p>Ezra Court estate, Lekki Phase 1, Lagos.</p>
-      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Ezra+Court+Lekki+Phase+1+Lagos" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Open in Google Maps</a>
-      <p class="note">The exact unit is shared once your stay is confirmed.</p>
-    </section>
-    <section>
-      <a class="btn btn-red" style="width:100%" data-wa="stay" href="#">Check availability</a>
-      <p class="note" style="text-align:center">Photos and tour from December 2024.</p>
-    </section>
-  </div>
+  <div class="panel" id="sheetPanel"></div>
 </div>
 
-<!-- tour -->
-<div class="layer" id="tour" role="dialog" aria-modal="true" aria-label="Ezra Courts virtual tour">
+<div class="layer" id="tour" role="dialog" aria-modal="true" aria-label="Ezrahaus virtual tour">
   <div id="pano"></div>
   <div class="loading" id="tourLoading"><div><div class="spin"></div>Loading the tour…</div></div>
   <div class="fallback" id="tourFail"><div><p>The 3D view couldn't load on this device.</p><button class="btn btn-line" style="margin-top:16px" data-tour-photos>See the photos instead</button></div></div>
   <div class="hint off" id="hint">Drag to look around<br>Tap the labels to move</div>
   <div class="tour-bar">
     <button class="icon-btn" data-tour-close aria-label="Close tour"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-    <div class="tour-title"><b id="roomName">Living room</b><span>Ezra Courts · Dec 2024</span></div>
+    <div class="tour-title"><b id="roomName">Living room</b><span>Ezrahaus · Preview tour</span></div>
     <button class="rooms-btn" id="roomsBtn" aria-expanded="false" aria-controls="roomList"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Rooms</button>
   </div>
   <nav class="room-list" id="roomList" aria-label="Rooms"><h3>Jump to a room</h3><div id="roomBtns"></div></nav>
   <div class="tour-foot">
-    <a class="btn btn-red" id="askRoom" data-wa="room" href="#">Ask about this room</a>
-    <p class="tour-note">Demo tour built from existing photos and video. Views are partial.</p>
+    <a class="btn btn-main" id="askRoom" data-wa="room" href="#">Ask about this room</a>
+    <p class="tour-note">Preview tour built from existing photos and video. Views are partial.</p>
   </div>
 </div>
 
 <script>
 (function(){
 "use strict";
-/* ===== config (client data) ===== */
-var WA_NUMBER = "2347042317680"; // Gifted's WhatsApp in international digits. Empty = WhatsApp share picker.
+/* ================= client data ================= */
+var WA_NUMBER = "2349045165367";   // WhatsApp in international digits
 var SITE = location.origin + location.pathname;
-var PHOTOS = [
-  ["0701","Living room","Living room with open glass staircase",42],
-  ["0698","Lounge","Lounge looking towards the TV wall and kitchen",50],
-  ["0703","Kitchen","Kitchen island with pendant lights and bar stools",50],
-  ["0704","Kitchen","Fitted kitchen with built-in oven and washing machine",40],
-  ["0707","Bedroom 1","Bedroom 1 with upholstered headboard and ring light",58],
-  ["0700","Bedroom 1","Bedroom 1 TV wall and work desk",30],
-  ["0706","Bedroom 2","Bedroom 2 with wave feature wall, seen from the desk",50],
-  ["0702","Bedroom 2","Bedroom 2 TV wall with lit niche",45],
-  ["0699","Bathroom","Rain shower with lit niche",50],
-  ["0705","Bathroom","Bathroom with walk-in shower",50]
+var FAQ = [
+  ["Check-in and check-out","Check-in from 3:00 pm, check-out by 11:00 am. Early check-in or late check-out on request, subject to availability."],
+  ["Security deposit","A refundable deposit, which varies by apartment. It's returned within 7 days of check-out if there's no damage."],
+  ["Airport transfers","We can arrange them. Tell our concierge at least 24 hours before you arrive."],
+  ["Long stays","Discounted rates for stays longer than 30 days. Ask our booking team."]
+];
+var APTS = [
+  { slug:"ezrahaus", name:"Ezrahaus", kind:"2-bedroom maisonette", area:"Lekki Phase 1", beds:2, baths:"3", size:"250 m²", price:"₦180,000",
+    card:["0701",42], tour:true, airbnb:"https://www.airbnb.com/rooms/1312815567252380971",
+    chips:["Swimming pool","Backup power","Smart home","Surround sound"], hl:null,
+    about:"A two-floor maisonette of refined, contemporary interiors and warm, layered light. Thoughtful living spaces and close attention to detail make it a calm base for business or leisure.",
+    features:["Modern kitchen with high-end appliances","Swimming pool","Fast WiFi","Surround sound system","Smart home technology throughout","Secure parking for multiple vehicles","24/7 security","Backup power supply","Essentials (toiletries)","24/7 concierge service","Clean and treated water"],
+    photos:[["0701","Living room","Living room with open glass staircase",42],["0698","Lounge","Lounge looking towards the TV wall and kitchen",50],["0703","Kitchen","Kitchen island with pendant lights and bar stools",50],["0704","Kitchen","Fitted kitchen with built-in oven",40],["0707","Bedroom","Bedroom with upholstered headboard and ring light",58],["0700","Bedroom","Bedroom TV wall and work desk",30],["0706","Bedroom","Second bedroom with wave feature wall",50],["0702","Bedroom","Second bedroom TV wall with lit niche",45],["0699","Bathroom","Rain shower with lit niche",50],["0705","Bathroom","Bathroom with walk-in shower",50]] },
+  { slug:"jeyden", name:"Jeyden", kind:"2-bedroom apartment", area:"Lekki Phase 1", beds:2, baths:"2.5", size:"250 m²", price:"₦180,000",
+    card:["jeyden-00",30], tour:false, airbnb:"https://www.airbnb.com/rooms/1709448057496998362",
+    chips:["Flood free","Swimming pool","Gym","Private balconies"], hl:"Flood free",
+    about:"A stylish, stress-free two-bedroom in a prime Lekki Phase 1 location, close to everything you need. En-suite bedrooms, private balconies, Netflix and complimentary housekeeping.",
+    features:["Flood free","24/7 power","Fast WiFi","Netflix","En-suite bedrooms","Private balconies","Swimming pool","Gym","Modern kitchen with high-end appliances","Complimentary housekeeping","24/7 security","Secure parking for multiple vehicles","Essentials (toiletries)","Clean and treated water","24/7 concierge service"],
+    photos:[["jeyden-00","Living and dining","Open living and dining room with tan sectional sofa",30],["jeyden-01","Living room","Living room with TV wall and plant",50],["jeyden-03","Living and kitchen","Living room opening onto the kitchen",50],["jeyden-04","Living and kitchen","Sofas with the kitchen beyond",50],["jeyden-08","Kitchen","Kitchen island and wall art",40],["jeyden-02","Living room","Living room with TV and sectional",50],["jeyden-09","Bedroom","Bedroom with TV, wardrobe and teal throw",60],["jeyden-10","Bedroom","Bedroom with fitted wardrobe",50],["jeyden-12","Bedroom","Second bedroom with grey headboard",50],["jeyden-13","Bedroom","Second bedroom and curtains",50],["jeyden-14","Bedroom","Second bedroom TV wall",50],["jeyden-07","Bathroom","Bathroom with glass shower",50]] },
+  { slug:"peridot", name:"Peridot", kind:"2-bedroom apartment", area:"Lekki Phase 1", beds:2, baths:"2.5", size:"250 m²", price:"₦180,000",
+    card:["peridot-00",50], tour:false, airbnb:"",
+    chips:["Monthly self-service","Smart home","Gym","Surround sound"], hl:"Monthly self-service",
+    about:"A sanctuary where contemporary design meets effortless comfort: a curated two-bedroom en-suite residence in the heart of Lekki. Available for monthly self-service stays.",
+    features:["Smart home technology throughout","24/7 security","Essentials (toiletries)","Clean and treated water","24/7 concierge service","Backup power supply","Secure parking for multiple vehicles","Surround sound system","Fast WiFi","Gym"],
+    photos:[["peridot-00","Living and kitchen","Living room and kitchen with crystal chandelier",50],["peridot-01","Living room","Living room with arched doorway and sectional",40],["peridot-02","Living room","Living room with blue armchair",50],["peridot-03","Living room","TV wall with chandelier",50],["peridot-04","Bedroom","Bedroom with feature wall and TV",50],["peridot-05","Bathroom","Bathroom with glass shower",50]] }
 ];
 var ROOMS = {
   "living":   {name:"Living room", haov:90.6, vaov:52.5, yaw:0,
@@ -455,32 +380,48 @@ var ROOMS = {
 };
 var ORDER = ["living","lounge","kitchen","bed1","bed1-desk","bed2","bed2-tv","shower","toilet"];
 
-/* ===== helpers ===== */
+/* ================= helpers ================= */
 function $(s,c){return (c||document).querySelector(s)}
 function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function bySlug(s){ for(var i=0;i<APTS.length;i++) if(APTS[i].slug===s) return APTS[i]; return null; }
 var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 var saveData = !!(navigator.connection && navigator.connection.saveData);
 function store(k,v){try{ if(v===undefined) return sessionStorage.getItem(k); sessionStorage.setItem(k,v);}catch(e){return null}}
-function wa(text){
-  var t = encodeURIComponent(text);
-  return WA_NUMBER ? "https://wa.me/"+WA_NUMBER+"?text="+t : "https://wa.me/?text="+t;
-}
+function wa(text){ var t=encodeURIComponent(text); return WA_NUMBER ? "https://wa.me/"+WA_NUMBER+"?text="+t : "https://wa.me/?text="+t; }
 var currentRoom = "living";
-function waText(kind){
-  if(kind==="stay") return "Hi Gifted, I'd like to check availability for Ezra Courts (2-bedroom maisonette, Lekki Phase 1).\nDates: \nGuests: ";
-  if(kind==="room") return "Hi Gifted, I'm looking at the "+ROOMS[currentRoom].name.toLowerCase()+" in Ezra Courts on your tour: "+SITE+"#tour/ezra-courts/"+currentRoom+"\nIs it available for my dates?";
+function waText(kind, slug){
+  var a = slug && bySlug(slug);
+  if(kind==="stay" && a) return "Hi Gifted, I'd like to check availability for "+a.name+" ("+a.kind+", "+a.area+").\nDates: \nGuests: ";
+  if(kind==="room") return "Hi Gifted, I'm looking at the "+ROOMS[currentRoom].name.toLowerCase()+" in Ezrahaus on your tour: "+SITE+"#tour/ezrahaus/"+currentRoom+"\nIs it available for my dates?";
+  if(kind==="match") return "Hi Gifted, I'm planning a stay in Lekki.\nDates: \nGuests: \nCan you tell me what's available?";
+  if(kind==="owner") return "Hi Gifted, I own a property and I'd like to talk about shortlet management.";
   return "Hi Gifted, I found your website and I'd like to ask about your shortlets.";
 }
-function wire(){ $$("[data-wa]").forEach(function(a){ a.href = wa(waText(a.getAttribute("data-wa"))); a.target="_blank"; a.rel="noopener"; }); }
-wire();
+function wire(root){ $$("[data-wa]",root).forEach(function(a){ a.href = wa(waText(a.getAttribute("data-wa"), a.getAttribute("data-slug"))); a.target="_blank"; a.rel="noopener"; }); }
+var WA_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>';
+var TOUR_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><path d="M12 2v20"/></svg>';
+var X_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+var PIN_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>';
+function priceHTML(a){ return '<div class="price"><b>'+a.price+'</b><i>/ night</i></div>'; }
+function metaText(a){ return a.baths+" baths · "+a.area; }
 
-/* ===== splash ===== */
+/* ================= cards ================= */
+$("#cards").innerHTML = APTS.map(function(a){
+  return '<article class="card">'+
+    (a.tour ? '<span class="badge">'+TOUR_ICON+'360° tour</span>' : '')+
+    '<div class="ph"><img src="img/'+a.card[0]+'-800.jpg" srcset="img/'+a.card[0]+'-800.jpg 800w, img/'+a.card[0]+'-1600.jpg 1600w" sizes="(min-width:760px) 33vw, 100vw" style="object-position:'+a.card[1]+'% 50%" alt="'+esc(a.photos[0][2])+'" loading="lazy"></div>'+
+    '<div class="body"><h3>'+esc(a.name)+'</h3><p class="meta">'+esc(a.kind)+' · '+esc(a.area)+'</p>'+priceHTML(a)+
+    '<button class="btn btn-line" data-open-stay="'+a.slug+'">More info</button></div></article>';
+}).join("");
+wire(document);
+
+/* ================= splash ================= */
 var splash = $("#splash");
-function hideSplash(){ splash.classList.add("gone"); setTimeout(function(){splash.remove()},700); }
 if (store("gifted-splash") || location.hash.length>1) { splash.remove(); }
-else { store("gifted-splash","1"); setTimeout(hideSplash, reduce?600:2300); }
+else { store("gifted-splash","1"); setTimeout(function(){ splash.classList.add("gone"); setTimeout(function(){splash.remove()},700); }, reduce?600:2300); }
 
-/* ===== hero film (portrait only, after load, not on data saver) ===== */
+/* ================= hero film ================= */
 var vid = $("#heroVid");
 function startFilm(){
   if (saveData || reduce || !matchMedia("(orientation: portrait)").matches) return;
@@ -491,121 +432,159 @@ function startFilm(){
 if (document.readyState==="complete") setTimeout(startFilm,300); else addEventListener("load", function(){ setTimeout(startFilm,300); });
 document.addEventListener("visibilitychange", function(){ if(!vid.src) return; document.hidden ? vid.pause() : vid.play().catch(function(){}); });
 
-/* ===== stay feed ===== */
-var stay = $("#stay"), slide = $("#s-ezra"), strip = $(".photos", slide);
-var count = $(".count", slide), cap = $(".room-cap", slide), dots = $(".dots", slide);
-var built = false, lastFocus = null, pushed = 0;
-function buildPhotos(){
+/* ================= stay feed ================= */
+var stay = $("#stay"), built = false, lastFocus = null, pushed = 0, currentSlug = null;
+function slideHTML(a){
+  var tourBtn = a.tour
+    ? '<button class="btn btn-line" data-tour="'+a.slug+'">'+TOUR_ICON+'Take the tour</button>'
+    : '<button class="btn btn-line" aria-disabled="true" title="Tour coming soon">'+TOUR_ICON+'Tour coming soon</button>';
+  return '<article class="slide" id="s-'+a.slug+'" data-slug="'+a.slug+'" aria-label="'+esc(a.name)+'">'+
+    '<div class="photos" tabindex="0" aria-label="Photos of '+esc(a.name)+'. Swipe sideways for more."></div><div class="shade"></div>'+
+    '<div class="bar"><button class="icon-btn" data-close aria-label="Close">'+X_ICON+'</button><span class="count" aria-live="polite">1 / '+a.photos.length+'</span></div>'+
+    '<p class="room-cap"></p>'+
+    '<button class="icon-btn arrow prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>'+
+    '<button class="icon-btn arrow next" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>'+
+    '<div class="info"><div class="dots" aria-hidden="true">'+a.photos.map(function(){return "<i></i>"}).join("")+'</div>'+
+    '<h2>'+esc(a.name)+'</h2><p class="meta">'+esc(a.kind)+' · '+esc(metaText(a))+'</p>'+priceHTML(a)+
+    '<div class="chips">'+a.chips.map(function(c){return '<span'+(c===a.hl?' class="hl"':'')+'>'+esc(c)+'</span>'}).join("")+'</div>'+
+    '<div class="acts"><a class="btn btn-main wide" data-wa="stay" data-slug="'+a.slug+'" href="#">'+WA_ICON+'Check availability</a>'+tourBtn+
+    '<button class="btn btn-line" data-sheet="'+a.slug+'">Full details</button></div>'+
+    '<p class="swipe" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 15 6-6 6 6"/></svg>Swipe up for the next apartment</p></div></article>';
+}
+function buildFeed(){
   if (built) return; built = true;
-  PHOTOS.forEach(function(p,i){
-    var f = document.createElement("figure");
-    var img = document.createElement("img");
-    img.alt = p[2]; img.decoding = "async";
-    img.sizes = "100vw";
-    img.style.objectPosition = p[3]+"% 50%";
-    if (i>0) img.loading = "lazy";
-    img.srcset = "img/"+p[0]+"-800.jpg 800w, img/"+p[0]+"-1600.jpg 1600w";
-    img.src = "img/"+p[0]+"-1600.jpg";
+  stay.innerHTML = APTS.map(slideHTML).join("") +
+    '<article class="slide end" id="s-end"><div class="bar"><button class="icon-btn" data-close aria-label="Close">'+X_ICON+'</button><span></span></div>'+
+    '<div class="in"><img src="img/logo-light.png" alt="" width="110" height="73"><h2>Not sure which one?</h2><p>Send us your dates and we\'ll tell you what\'s free.</p>'+
+    '<a class="btn btn-main" data-wa="match" href="#">'+WA_ICON+'Tell us your dates</a>'+
+    '<button class="btn btn-line" data-back-top>Back to the first apartment</button>'+
+    '<a class="own" data-wa="owner" href="#">Own a home in Lekki? Talk to us about management</a></div></article>';
+  wire(stay);
+  $$(".slide[data-slug]",stay).forEach(initSlide);
+  $$("[data-close]",stay).forEach(function(b){ b.addEventListener("click", back); });
+  $("[data-back-top]",stay).addEventListener("click",function(){ stay.scrollTo({top:0,behavior:reduce?"auto":"smooth"}); });
+  $$("[data-sheet]",stay).forEach(function(b){ b.addEventListener("click", function(){ openSheet(b.getAttribute("data-sheet")); }); });
+  $$("[data-tour]",stay).forEach(function(b){ b.addEventListener("click", function(){ openTour("living", true); }); });
+  var t; stay.addEventListener("scroll", function(){ clearTimeout(t); t=setTimeout(function(){
+    var i = Math.round(stay.scrollTop/stay.clientHeight), s = stay.children[i];
+    if (s && s.dataset.slug) { loadPhotos(s); if (s.dataset.slug!==currentSlug){ currentSlug=s.dataset.slug; history.replaceState(history.state,"","#stay/"+currentSlug); } }
+    var nx = stay.children[i+1]; if (nx && nx.dataset.slug) loadPhotos(nx, true);
+  },120); }, {passive:true});
+}
+function initSlide(s){
+  var strip=$(".photos",s);
+  $(".arrow.prev",s).addEventListener("click",function(){ strip.scrollBy({left:-strip.clientWidth,behavior:reduce?"auto":"smooth"}); });
+  $(".arrow.next",s).addEventListener("click",function(){ strip.scrollBy({left:strip.clientWidth,behavior:reduce?"auto":"smooth"}); });
+  strip.addEventListener("keydown",function(e){ if(e.key==="ArrowRight"){e.preventDefault();$(".arrow.next",s).click()} if(e.key==="ArrowLeft"){e.preventDefault();$(".arrow.prev",s).click()} });
+  var t; strip.addEventListener("scroll", function(){ clearTimeout(t); t=setTimeout(function(){ updateCount(s, Math.round(strip.scrollLeft/strip.clientWidth)); },60); }, {passive:true});
+}
+/* photos are only created when a slide is shown (or is next): no data spent on apartments nobody looks at */
+function loadPhotos(s, firstOnly){
+  var a = bySlug(s.dataset.slug), strip = $(".photos",s);
+  var have = strip.children.length, want = firstOnly ? 1 : a.photos.length;
+  for (var i=have;i<want;i++){
+    var p=a.photos[i], f=document.createElement("figure"), img=document.createElement("img");
+    img.alt=p[2]; img.decoding="async"; img.sizes="100vw"; img.style.objectPosition=p[3]+"% 50%";
+    if (i>0) img.loading="lazy";
+    img.srcset="img/"+p[0]+"-800.jpg 800w, img/"+p[0]+"-1600.jpg 1600w"; img.src="img/"+p[0]+"-1600.jpg";
     f.appendChild(img); strip.appendChild(f);
-    dots.appendChild(document.createElement("i"));
-  });
-  updateCount(0);
-  var t; strip.addEventListener("scroll", function(){ clearTimeout(t); t=setTimeout(function(){ updateCount(Math.round(strip.scrollLeft/strip.clientWidth)); },60); }, {passive:true});
+  }
+  if (!have) updateCount(s,0);
 }
-function updateCount(i){
-  i = Math.max(0,Math.min(PHOTOS.length-1,i));
-  count.textContent = (i+1)+" / "+PHOTOS.length;
-  cap.textContent = PHOTOS[i][1];
-  $$("i",dots).forEach(function(d,k){ d.classList.toggle("on",k===i); });
+function updateCount(s,i){
+  var a = bySlug(s.dataset.slug); i=Math.max(0,Math.min(a.photos.length-1,i));
+  $(".count",s).textContent=(i+1)+" / "+a.photos.length; $(".room-cap",s).textContent=a.photos[i][1];
+  $$(".dots i",s).forEach(function(d,k){ d.classList.toggle("on",k===i); });
 }
-$(".arrow.prev",slide).addEventListener("click",function(){ strip.scrollBy({left:-strip.clientWidth,behavior:reduce?"auto":"smooth"}); });
-$(".arrow.next",slide).addEventListener("click",function(){ strip.scrollBy({left:strip.clientWidth,behavior:reduce?"auto":"smooth"}); });
-strip.addEventListener("keydown",function(e){ if(e.key==="ArrowRight"){e.preventDefault();$(".arrow.next",slide).click()} if(e.key==="ArrowLeft"){e.preventDefault();$(".arrow.prev",slide).click()} });
-
 function lock(){ document.body.classList.add("locked"); $("#main").setAttribute("inert",""); }
 function unlockIfClear(){ if(!$(".layer.open")) { document.body.classList.remove("locked"); $("#main").removeAttribute("inert"); } }
-
-function openStay(fromUser){
-  buildPhotos();
-  if (!stay.classList.contains("open")) { lastFocus = document.activeElement; stay.classList.add("open"); stay.scrollTop = 0; lock(); }
-  if (fromUser) go("#stay/ezra-courts");
-  setTimeout(function(){ $("[data-close]",slide).focus({preventScroll:true}); },30);
+function openStay(slug, fromUser){
+  var a = bySlug(slug) || APTS[0]; buildFeed();
+  var s = $("#s-"+a.slug);
+  if (!stay.classList.contains("open")) { lastFocus = document.activeElement; stay.classList.add("open"); lock(); }
+  loadPhotos(s); var nx = s.nextElementSibling; if (nx && nx.dataset.slug) loadPhotos(nx,true);
+  stay.scrollTop = s.offsetTop; currentSlug = a.slug;
+  if (fromUser) go("#stay/"+a.slug);
+  setTimeout(function(){ $("[data-close]",s).focus({preventScroll:true}); },30);
 }
 function closeStay(){ stay.classList.remove("open"); closeSheet(true); unlockIfClear(); if(lastFocus) lastFocus.focus({preventScroll:true}); }
-$$("[data-open-stay]").forEach(function(b){ b.addEventListener("click",function(){ openStay(true); }); });
-$$("[data-close]",stay).forEach(function(b){ b.addEventListener("click", back); });
-$("[data-back-top]").addEventListener("click",function(){ stay.scrollTo({top:0,behavior:reduce?"auto":"smooth"}); });
+document.addEventListener("click", function(e){ var b=e.target.closest("[data-open-stay]"); if(b) openStay(b.getAttribute("data-open-stay"), true); });
 
-/* ===== details sheet ===== */
+/* ================= details sheet ================= */
 var sheet = $("#sheet"), sheetFocus = null;
-function openSheet(){ sheetFocus=document.activeElement; sheet.classList.add("open"); requestAnimationFrame(function(){ requestAnimationFrame(function(){ sheet.classList.add("show"); }); }); setTimeout(function(){ $(".sheet-h [data-sheet-close]").focus({preventScroll:true}); },50); }
+function sheetHTML(a){
+  return '<div class="grab"></div><div class="sheet-h"><div><h2 id="sheet-h">'+esc(a.name)+'</h2><p class="meta">'+esc(a.kind)+' · '+esc(a.area)+'</p></div>'+
+    '<button class="icon-btn" data-sheet-close aria-label="Close details">'+X_ICON+'</button></div>'+
+    '<section><div class="specs"><div><b>'+a.beds+'</b><span>Bedrooms</span></div><div><b>'+a.baths+'</b><span>Bathrooms</span></div><div><b>'+a.size+'</b><span>Size</span></div></div>'+
+    '<dl class="rows" style="margin-top:16px"><div><dt>Per night</dt><dd>'+a.price+'</dd></div></dl></section>'+
+    '<section><h3>About</h3><p>'+esc(a.about)+'</p></section>'+
+    '<section><h3>Features</h3><ul class="feat">'+a.features.map(function(f){return "<li>"+esc(f)+"</li>"}).join("")+'</ul></section>'+
+    '<section><h3>Good to know</h3><div class="faq">'+FAQ.map(function(q){return "<p><b>"+esc(q[0])+"</b>"+esc(q[1])+"</p>"}).join("")+'</div></section>'+
+    '<section><h3>Location</h3><p>'+esc(a.area)+', Lagos.</p>'+
+    '<a class="maplink" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(a.area+", Lagos")+'" target="_blank" rel="noopener">'+PIN_ICON+'Open in Google Maps</a>'+
+    '<p class="note">The exact address is shared once your stay is confirmed.</p></section>'+
+    '<section><a class="btn btn-main" style="width:100%" data-wa="stay" data-slug="'+a.slug+'" href="#">'+WA_ICON+'Check availability</a>'+
+    (a.airbnb ? '<a class="maplink" style="justify-content:center;margin-top:6px;color:var(--ink-2)" href="'+a.airbnb+'" target="_blank" rel="noopener">Also listed on Airbnb</a>' : '')+
+    '</section>';
+}
+function openSheet(slug){
+  var a=bySlug(slug); if(!a) return;
+  $("#sheetPanel").innerHTML = sheetHTML(a); wire(sheet); $("#sheetPanel").scrollTop=0;
+  $$("[data-sheet-close]",sheet).forEach(function(b){ b.addEventListener("click", function(){ closeSheet(); }); });
+  sheetFocus=document.activeElement; sheet.classList.add("open");
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ sheet.classList.add("show"); }); });
+  setTimeout(function(){ $(".sheet-h [data-sheet-close]").focus({preventScroll:true}); },50);
+}
 function closeSheet(silent){ if(!sheet.classList.contains("open")) return; sheet.classList.remove("show"); setTimeout(function(){ sheet.classList.remove("open"); }, reduce?0:350); if(!silent && sheetFocus) sheetFocus.focus({preventScroll:true}); }
-$("[data-sheet]").addEventListener("click", openSheet);
-$$("[data-sheet-close]").forEach(function(b){ b.addEventListener("click", function(){ closeSheet(); }); });
+$(".scrim",sheet).addEventListener("click", function(){ closeSheet(); });
 
-/* ===== tour (code + images load only when opened) ===== */
+/* ================= tour (Ezrahaus preview; code and images load only when opened) ================= */
 var tour = $("#tour"), viewer = null, libPromise = null, hintShown = false;
 function loadLib(){
   if (libPromise) return libPromise;
   libPromise = new Promise(function(res,rej){
-    var l = document.createElement("link"); l.rel="stylesheet"; l.href="vendor/pannellum.css"; document.head.appendChild(l);
-    var s = document.createElement("script"); s.src="vendor/pannellum.js"; s.onload=res; s.onerror=rej; document.head.appendChild(s);
+    var l=document.createElement("link"); l.rel="stylesheet"; l.href="vendor/pannellum.css"; document.head.appendChild(l);
+    var s=document.createElement("script"); s.src="vendor/pannellum.js"; s.onload=res; s.onerror=rej; document.head.appendChild(s);
   });
   return libPromise;
 }
 function arrow(dir){
-  var d = {up:"M12 19V5m-6 6 6-6 6 6", left:"M19 12H5m6-6-6 6 6 6", right:"M5 12h14m-6-6 6 6-6 6", down:"M12 5v14m6-6-6 6-6-6"}[dir]||"M5 12h14";
+  var d={up:"M12 19V5m-6 6 6-6 6 6",left:"M19 12H5m6-6-6 6 6 6",right:"M5 12h14m-6-6 6 6-6 6",down:"M12 5v14m6-6-6 6-6-6"}[dir]||"M5 12h14";
   return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="'+d+'"/></svg>';
 }
-function hsTip(div, args){
-  div.classList.add("hs-wrap");
-  var b = document.createElement("button"); b.className="hs"; b.type="button";
-  b.innerHTML = arrow(args.dir)+"<span>"+args.label+"</span>";
-  b.addEventListener("click", function(e){ e.stopPropagation(); showRoom(args.to); });
+function hsTip(div,args){
+  var b=document.createElement("button"); b.className="hs"; b.type="button";
+  b.innerHTML=arrow(args.dir)+"<span>"+args.label+"</span>";
+  b.addEventListener("click",function(e){ e.stopPropagation(); showRoom(args.to); });
   div.appendChild(b);
 }
 function buildConfig(first){
-  var scenes = {};
+  var scenes={};
   ORDER.forEach(function(id){
-    var r = ROOMS[id];
-    scenes[id] = {
-      type:"equirectangular", panorama:"tour/"+id+".jpg",
-      haov:r.haov, vaov:r.vaov, vOffset:r.voff||0,
-      yaw:r.yaw, pitch:(r.voff||0), hfov: Math.min(r.haov*0.9, 100),
-      minHfov:20, maxHfov: Math.min(r.haov, 110),
-      minPitch:(r.voff||0)-r.vaov/2, maxPitch:(r.voff||0)+r.vaov/2,
-      minYaw:-r.haov/2, maxYaw:r.haov/2,
-      avoidShowingBackground:true,
-      hotSpots: r.hs.map(function(h){ return {pitch:h.pitch, yaw:h.yaw, type:"info", cssClass:"hs-spot", createTooltipFunc:hsTip, createTooltipArgs:h}; })
-    };
+    var r=ROOMS[id], vo=r.voff||0;
+    scenes[id]={type:"equirectangular", panorama:"tour/"+id+".jpg", haov:r.haov, vaov:r.vaov, vOffset:vo,
+      yaw:r.yaw, pitch:vo, hfov:Math.min(r.haov*0.9,100), minHfov:20, maxHfov:Math.min(r.haov,110),
+      minPitch:vo-r.vaov/2, maxPitch:vo+r.vaov/2, minYaw:-r.haov/2, maxYaw:r.haov/2, avoidShowingBackground:true,
+      hotSpots:r.hs.map(function(h){ return {pitch:h.pitch,yaw:h.yaw,type:"info",cssClass:"hs-spot",createTooltipFunc:hsTip,createTooltipArgs:h}; })};
   });
-  return {default:{firstScene:first, sceneFadeDuration: reduce?0:450, autoLoad:true, showControls:false, keyboardZoom:true, mouseZoom:true, draggable:true, friction:0.2, compass:false, showFullscreenCtrl:false}, scenes:scenes};
+  return {default:{firstScene:first, sceneFadeDuration:reduce?0:450, autoLoad:true, showControls:false, keyboardZoom:true, mouseZoom:true, draggable:true, friction:0.2, compass:false, showFullscreenCtrl:false}, scenes:scenes};
 }
 function setRoomUI(id){
-  currentRoom = id;
-  $("#roomName").textContent = ROOMS[id].name;
-  $$("#roomBtns button").forEach(function(b){ b.setAttribute("aria-current", b.dataset.room===id ? "true":"false"); });
-  $("#askRoom").href = wa(waText("room"));
-  history.replaceState(history.state, "", "#tour/ezra-courts/"+id);
+  currentRoom=id; $("#roomName").textContent=ROOMS[id].name;
+  $$("#roomBtns button").forEach(function(b){ b.setAttribute("aria-current", b.dataset.room===id?"true":"false"); });
+  $("#askRoom").href=wa(waText("room"));
+  history.replaceState(history.state,"","#tour/ezrahaus/"+id);
 }
-function showRoom(id){
-  if (!ROOMS[id]) return;
-  if (viewer) { if (viewer.getScene()!==id) viewer.loadScene(id); }
-  setRoomUI(id); closeRooms();
-}
+function showRoom(id){ if(!ROOMS[id]) return; if(viewer && viewer.getScene()!==id) viewer.loadScene(id); setRoomUI(id); closeRooms(); }
 function buildRoomList(){
-  var box = $("#roomBtns"); if (box.children.length) return;
-  ORDER.forEach(function(id){
-    var b = document.createElement("button"); b.type="button"; b.dataset.room=id; b.textContent=ROOMS[id].name;
-    b.addEventListener("click", function(){ showRoom(id); });
-    box.appendChild(b);
-  });
+  var box=$("#roomBtns"); if(box.children.length) return;
+  ORDER.forEach(function(id){ var b=document.createElement("button"); b.type="button"; b.dataset.room=id; b.textContent=ROOMS[id].name; b.addEventListener("click",function(){ showRoom(id); }); box.appendChild(b); });
 }
+function tourFail(){ $("#tourLoading").style.display="none"; $("#tourFail").classList.add("on"); }
 function openTour(room, fromUser){
-  room = ROOMS[room] ? room : "living";
-  buildRoomList();
-  if (!tour.classList.contains("open")) { if(!stay.classList.contains("open")) lastFocus = document.activeElement; tour.classList.add("open"); lock(); }
-  if (fromUser) go("#tour/ezra-courts/"+room);
+  room = ROOMS[room] ? room : "living"; buildRoomList();
+  if (!tour.classList.contains("open")) { if(!stay.classList.contains("open")) lastFocus=document.activeElement; tour.classList.add("open"); lock(); }
+  if (fromUser) go("#tour/ezrahaus/"+room);
   setRoomUI(room);
   setTimeout(function(){ $("[data-tour-close]").focus({preventScroll:true}); },30);
   if (viewer) { showRoom(room); return; }
@@ -615,43 +594,41 @@ function openTour(room, fromUser){
       viewer = pannellum.viewer("pano", buildConfig(room));
       viewer.on("load", function(){
         $("#tourLoading").style.display="none";
-        viewer.setHfov(110, false);  /* re-apply the view limits once the canvas exists */
+        viewer.setHfov(110,false); /* re-apply the view limits once the canvas exists */
         if (!hintShown){ hintShown=true; var h=$("#hint"); h.classList.remove("off");
           var off=function(){ h.classList.add("off"); $("#pano").removeEventListener("pointerdown",off); };
           $("#pano").addEventListener("pointerdown",off); setTimeout(off,4500); }
       });
       viewer.on("scenechange", function(id){ setRoomUI(id); });
-      viewer.on("error", function(){ $("#tourLoading").style.display="none"; $("#tourFail").classList.add("on"); });
-    } catch(e){ $("#tourLoading").style.display="none"; $("#tourFail").classList.add("on"); }
-  }).catch(function(){ $("#tourLoading").style.display="none"; $("#tourFail").classList.add("on"); });
+      viewer.on("error", tourFail);
+    } catch(e){ tourFail(); }
+  }).catch(tourFail);
 }
-function closeTour(){ tour.classList.remove("open"); closeRooms(); unlockIfClear(); if(stay.classList.contains("open")) $("[data-tour]").focus({preventScroll:true}); else if(lastFocus) lastFocus.focus({preventScroll:true}); }
-$("[data-tour]").addEventListener("click", function(){ openTour("living", true); });
+function closeTour(){ tour.classList.remove("open"); closeRooms(); unlockIfClear(); var b=$("[data-tour]"); if(stay.classList.contains("open") && b) b.focus({preventScroll:true}); else if(lastFocus) lastFocus.focus({preventScroll:true}); }
 $("[data-tour-close]").addEventListener("click", back);
-$("[data-tour-photos]").addEventListener("click", function(){ back(); });
+$("[data-tour-photos]").addEventListener("click", back);
 var roomList=$("#roomList"), roomsBtn=$("#roomsBtn");
 function closeRooms(){ roomList.classList.remove("open"); roomsBtn.setAttribute("aria-expanded","false"); }
 roomsBtn.addEventListener("click", function(){ var o=!roomList.classList.contains("open"); roomList.classList.toggle("open",o); roomsBtn.setAttribute("aria-expanded",String(o)); if(o) $("#roomBtns button[aria-current=true]").focus(); });
 
-/* ===== routing: #stay/ezra-courts, #tour/ezra-courts/<room> ===== */
-function go(hash){ if (location.hash!==hash){ history.pushState({layer:true}, "", hash); pushed++; } }
+/* ================= routing: #stay/<slug>, #tour/ezrahaus/<room> ================= */
+function go(hash){ if (location.hash!==hash){ history.pushState({layer:true},"",hash); pushed++; } }
 function back(){
   if (sheet.classList.contains("open")) { closeSheet(); return; }
   if (pushed>0) { history.back(); }
-  else { history.replaceState(null,"", tour.classList.contains("open") ? "#stay/ezra-courts" : location.pathname); route(); }
+  else { history.replaceState(null,"", tour.classList.contains("open") ? "#stay/ezrahaus" : location.pathname); route(); }
 }
 function route(){
-  var h = location.hash;
-  var m = h.match(/^#tour\/ezra-courts(?:\/([\w-]+))?/);
-  if (m) { openStay(false); openTour(m[1]||"living", false); return; }
+  var h=location.hash, m=h.match(/^#tour\/ezrahaus(?:\/([\w-]+))?/);
+  if (m) { if(!stay.classList.contains("open")) openStay("ezrahaus",false); openTour(m[1]||"living",false); return; }
   if (tour.classList.contains("open")) closeTour();
-  if (/^#stay\/ezra-courts/.test(h)) { openStay(false); return; }
+  var s=h.match(/^#stay\/([\w-]+)/);
+  if (s) { if(!stay.classList.contains("open") || s[1]!==currentSlug) openStay(s[1],false); return; }
   if (stay.classList.contains("open")) closeStay();
 }
 addEventListener("resize", function(){ if(viewer && tour.classList.contains("open")) viewer.setHfov(110,false); });
 addEventListener("popstate", function(){ if(pushed>0) pushed--; route(); });
 if (location.hash.length>1) route();
-
 document.addEventListener("keydown", function(e){
   if (e.key!=="Escape") return;
   if (roomList.classList.contains("open")) { closeRooms(); roomsBtn.focus(); return; }

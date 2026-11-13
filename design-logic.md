@@ -1,45 +1,59 @@
-# Gifted: design logic (demo)
+# Gifted Homes and Apartments: design logic
 
-Status: pitch demo, one apartment (Ezra Courts). Built 12 Nov 2026. Not for public release until the sample data is replaced.
+Status: full storefront, 3 apartments. Built 13 Nov 2026. It replaces giftedhomesandapartments.com; the owner agreed to the change.
+The only demo part is the Ezrahaus 360° tour, a preview built from existing photos and video.
 
 ## 0. Personality brief
 - Feeling words: calm, warm, assured. Never: loud.
 - Customer moment: someone on their phone planning a Lagos stay, checking whether the place looks as good as the post.
-- The place: the apartment at night, warm LED coves and a crystal chandelier against grey and wood.
+- The place: a Lekki apartment at night, with warm LED coves, chandeliers, and grey and wood finishes.
 - Pace: slow.
-- Levers:
-  - Colour: navy and red, from the Kabana brand (client asked to keep it and change only the name). Red only on WhatsApp actions and the ribbon.
-  - Type: Montserrat for the wordmark and UI, Cormorant Garamond italic for the tagline and section titles.
-  - Shape: pills, thin hairlines.
-  - Signature: a red ribbon under the GIFTED wordmark ("Every stay, a gift.").
-  - Motion: slow fades, a 6-second muted hero loop of the real living room.
-- The Kabana keyhole "A" is not used: it is Kabana's mark, not Gifted's.
+- Identity comes from Gifted's existing brand, taken from their current site:
+  - Logo: the roofline mark plus "GIFTED HOMES & APARTMENTS". It is recoloured to cream for dark backgrounds.
+  - Colours: navy #1E2A3B, cream #F6F2EC, copper #9A5A31 (main action colour) and gold #C9A46A (accent).
+  - Type: Marcellus for display, Outfit for body.
+- TELDEV choices:
+  - a dark navy canvas
+  - a gold rule under the name
+  - "Every stay, a gift." (a shortened form of their line "Every stay should feel like a gift")
+  - a 6-second hero loop of the real Ezrahaus living room
 
-## 1. Structure (agreed with Joshua)
-Splash → hero (name, tagline, descriptor, Reach out, Explore shortlets) → listing cards → footer.
-"Explore shortlets" and "More info" open a full-screen feed (#stay/ezra-courts):
-- one apartment per screen, swiping up moves to the next one
-- photos swipe sideways
-- the key facts sit over a bottom tint
-- Check availability (WhatsApp), Take the tour, Full details (bottom sheet)
-The feed ends with a "more apartments on the way" card.
+## 1. Structure
+- Page: splash → hero (name, tagline, line, Reach out, Explore shortlets) → 3 listing cards → footer.
+- Footer contents: WhatsApp, phone, email, Instagram, TikTok, office, hours, homeowner management.
+- Feed (#stay/<slug>):
+  - one apartment per screen
+  - photos swipe sideways
+  - key facts over a bottom tint
+  - Check availability (WhatsApp, apartment named), Take the tour (Ezrahaus only; "Tour coming soon" disabled on the others), Full details
+  - ends with a "Not sure which one?" card
+- Details sheet:
+  - specs and price
+  - About and Features (from Gifted's own listings)
+  - Good to know (from their FAQ)
+  - area-only map link
+  - Airbnb link where listed (secondary action only)
 
-## 2. Tour
-- Viewer: Pannellum 2.5.6 (MIT), self-hosted in /vendor. Chosen over Photo Sphere Viewer because these are partial panoramas, and Pannellum clamps the view to the image edges.
-- Sources: no 360° capture exists. 8 stops are single photos reprojected to partial equirectangular images (about 70 to 97 degrees wide). The kitchen is stitched from video frames (19 to 31 s), about 144 degrees wide, and is softer than the rest.
-- Labelled in the viewer: "Demo tour built from existing photos and video. Views are partial."
-- Room links (#tour/ezra-courts/<room>) follow the walk-through video's route. The bathroom has no adjacency claim.
+## 2. Content sources
+- All listing data comes from giftedhomesandapartments.com/api/properties (public), read on 13 Nov 2026.
+- Dropped as out of scope: Paystack online booking, the reviews form, and the multi-page navigation.
+- The current site lists no published reviews, so there is no reviews section.
+- Exact street addresses (Jeyden's is public on the old site) are not shown, by the shortlet rule. The area is shown; the address goes out after booking.
 
-## 3. Data loading
-- On arrival: hero still (~170 KB) and the card photo.
-- Hero loop (~0.7 MB): starts after page load, portrait screens only; skipped under Save-Data or reduced motion.
-- Feed photos: load only when the feed opens, then lazily as the visitor swipes.
-- Tour: Pannellum and the panoramas (~0.4 to 0.7 MB per room) load only on "Take the tour", one room at a time.
+## 3. Tour (Ezrahaus)
+- Pannellum 2.5.6 (MIT), self-hosted. 9 partial views:
+  - 8 come from single camera photos reprojected
+  - the kitchen is stitched from video frames
+- Their site has no extra Ezrahaus media: the same photo set and no video.
+- Labelled "Preview tour built from existing photos and video. Views are partial."
 
-## 4. Sample data (replace before going live)
-- Rate ₦180,000/night, caution ₦100,000, 1-night minimum
-- Check-in 2 pm, check-out 12 pm
-- House rules
-- WhatsApp number: +234 704 231 7680 (given by Joshua, 12 Nov 2026), set as WA_NUMBER in index.html.
-- No Instagram handle.
-- Amenities: confirmed by Joshua on 12 Nov 2026.
+## 4. Data loading
+- On arrival: hero still, logo and 3 card photos.
+- Hero loop (~0.7 MB): portrait only, after load; skipped under Save-Data or reduced motion.
+- Feed: an apartment's photos load only when its screen is shown, plus the first photo of the next one.
+- Tour: code and panoramas load only on "Take the tour", one room at a time.
+
+## 5. Open items
+- WhatsApp: +234 904 516 5367 (confirmed by Joshua, 14 Nov 2026). It is also the phone number in the footer.
+- The office address differs on their own site: G1/G2 Shonny Highway vs 4 Olatunbosun Street, both in Shonibare Estate, Maryland. The page shows "Shonibare Estate, Maryland" and uses their Maps link.
+- Ezrahaus is listed with 3 bathrooms but the same 250 m² as the others. Confirm the sizes.
